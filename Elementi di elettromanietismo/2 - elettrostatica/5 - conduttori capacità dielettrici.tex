@@ -1,0 +1,104 @@
+\section{Conduttori, capacità, dielettrici}
+Il condensatore permette di immagazzinare energia e questa caratteristica
+prende il nome di capacità.
+
+\subsection{Capacità di un conduttore isolato}
+La capacità elettrica solitamente è:
+\begin{equation}
+    Q=CV
+\end{equation}
+
+Esempio per una superficie sferica:
+\begin{equation*}
+    V = \frac{Q}{4\pi\epsilon_0R}
+\end{equation*}
+\begin{equation*}
+    C = \frac{Q}{C} = 4\pi\epsilon_0R
+\end{equation*}
+
+\subsection{Induzzione totale}
+
+Se sono presenti due conduttori in induzione totale(tutte le linne 
+di forza del primo entrano nel secondo),
+allora il secondo avrà cariche uguali con segno opposto.
+
+\subsection{Condensatore}
+
+La capacità edl condensatore è $C = \frac{Q}{V}[F]$ e si misura in Farad(1 F = 1C/V),
+
+\subsection{Capacità di un condensatore piano}
+Avendo un condensatore con area delle armature $A$ e distanza delle armature $d$,
+\subsubsection{Densità superficiale}
+\begin{equation}
+    |\sigma| = \frac{Q}{A}
+\end{equation}
+
+\subsubsection{Campo elettrico tra le armature}
+\begin{equation}
+    E = \frac{|\sigma|}{\epsilon_0} = \frac{Q}{\epsilon_0 A}
+\end{equation}
+
+\subsubsection{Potenziale delle armature}
+\begin{equation}
+    V = Ed = \frac{Q}{\epsilon_0 A}d
+\end{equation}
+
+
+\subsubsection{Capacità condensatore}
+\begin{equation}
+    C = \frac{\epsilon_0A}{d}
+\end{equation}
+
+\subsection{Energia elettrostatica}
+Energia potenziale di una carica in un campo elettrico:
+
+Se ho un triangolo equilatero e ho delle cariche nei vertici, l'energia potenziale è:
+\begin{equation*}
+    U = \frac{1}{4\pi\epsilon_0}(\frac{q_1q_2}{d} + 
+    \frac{q_2q_3}{d} + 
+    \frac{q_1q_3}{d})
+\end{equation*}
+Quindi fa un ragioanmento individuale e poi si usa la sovrapposizione degli effetti.
+
+Generalizzando:
+\begin{equation}
+    U = \frac{1}{4\pi\epsilon_0}
+    \frac{1}{2}
+    \sum_{\substack{i,j=1 \\ i\neq j}}^N
+    {\frac{q_iq_j}{r_{ij}}}
+\end{equation}
+
+\subsection{Energia elettrostatica del condensatore}
+Per sapere l'energia del condensatore durante il suo periodo di carica,
+si usa un integrale.
+\begin{equation}
+    U = \int_0^Q{V'dQ' = \frac{1}{2}\frac{Q^2}{C}}
+\end{equation}
+
+\subsection{Densità di energia elettrostatica}
+\begin{equation}
+    u = \frac{U}{Ad}
+    = \frac{1}{2}\epsilon_0E^2
+\end{equation}
+
+\subsection{Proprietà elettrostatica dei diellettrici}
+La differenza di potenziale dipende anche dai materiali che si utilizzano come
+dielettrico fra le armature.
+La costante dielettrica relativa $\epsilon_r$ è il risultato di:
+\begin{equation*}
+    \epsilon_r = \frac{V_0}{V}
+\end{equation*}
+dove $V_0$ è la differenza di potenziale per dielettrico vuoto e $V$ 
+con un dielettrico generico.
+
+A volte si definisce \textbf{costante dielettrica} la quantità 
+$\epsilon = \epsilon_r\epsilon_0$.
+All'inserimento del dielettrico, il campo si riduce di un fattore 
+$\frac{1}{\epsilon_r}$, la capacità aumento di un fattore
+$\epsilon_r$ e l'energia potenziale cala di un fattore 
+$\frac{1}{\epsilon_r}$.
+
+Se invece si prova a cambiare il dielettrico con ancora il 
+generatore collegato, quest'ultimo dovrà trasferire un pochino
+di energia, quindi la carica del condensatore aumento di un fattore
+$\epsilon_r$.

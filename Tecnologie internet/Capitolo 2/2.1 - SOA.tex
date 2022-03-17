@@ -1,0 +1,22 @@
+\section{Architettura Orientata ai Servizi}
+SOA è l'Architettura prevalente per distribuire informazioni.
+SOA mette a disposizione l'interfaccia per un servizio(procollo, formato, comportamento) e chiunque ha l'accesso al servizio, rispettando i criteri, può effettuare richieste.
+\subsection{Quality of Service(QoS)}
+Un astessa interfaccia può corrispondere a diverse implementazioni, QoS è legato ad aspetti non-funzionali che influenzano come il servizio viene consumato:
+\begin{itemize}
+    \item Performance
+    \item Availability
+    \item Robustness
+    \item Required authorizetions
+    \item Cost
+\end{itemize}
+
+Il fornitore del servizio ed il suo consumatore devono stabilire un SLA(Service Level Agreement) per gestire le possibilità di utilizzo delle "API".
+
+\subsubsection{SoapUI}
+\href{https://www.soapui.org/}{SoapUI} è usato per testare i servizi:
+\begin{itemize}
+    \item Soap
+    \item REST
+    \item WSDL
+\end{itemize}

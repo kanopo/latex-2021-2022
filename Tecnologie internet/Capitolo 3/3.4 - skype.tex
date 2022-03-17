@@ -1,0 +1,26 @@
+\subsection{Skype}
+Applicazione per fornire un servizio VOIP p2p, l'unica parte centralizzata è quella di login.
+\subsubsection{Registrazione}
+Durante questa parte l'utente sceglie un username $A$ e una password $P_A$.
+Partendo da questi due dati, vengono generate:
+\begin{itemize}
+    \item Coppia di chiavi RSA $(S_A,V_A)$
+    \item $S_A$ è la chiave privata
+    \item $V_A$ è la chiave pubblica
+    \item il peer dell'utente conserva $S_A$ e $H(P_A)$ in una cache locale sicura
+    \item il peer si connette al server di login mediante una connessione basata su AES dove si generano e scambiano chiavi da 256 \begin{itemize}
+    \item il peer manda al server $A, V_A $ e $ H(P_A)$
+    \item il server controlla che A non sia già registrato
+    \item se non registrato, procede a registrare A e $H(H(P_A))$ nel DB
+    \item crea un certificato di identità $IC_A$ contenente $(A,V_A)^{S_{LS}}$ e manda il certificato al peer
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Login}
+\begin{itemize}
+    \item Il peer si identificata con la sua IC al login server
+    \item il server ritorna una lista di supernodi
+    \item l'user avvia una connessione TCP
+    \item il peer annuncia di ai suo peer "amici" di essere on-line
+    \item i peer comunicano passando da dei supernodi(un po come dei router)
+\end{itemize}

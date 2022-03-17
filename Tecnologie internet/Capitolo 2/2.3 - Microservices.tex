@@ -1,0 +1,35 @@
+\subsection{Microservizi}
+Un Microservizio è un servizio indipendente che assolve us una certa problematica specifica, (sempre filosofia UNIX), si tende ad avere un applicazione che necessita di tanti microservizi che si occupano di spefifiche azioni.
+Vengono trattati come delle scatole nere che adempiono ad un compito!
+
+\subsubsection{Stili di comunicazione}
+\begin{itemize}
+    \item Sincrono bloccante
+    \item asincrono non bloccante
+    \item richiesta risposta
+    \item event-driven
+    \item dati comuni
+\end{itemize}
+
+\subsubsection{Implementing Microservice Communication}
+Good practices:
+\begin{itemize}
+    \item backwards compatibility
+    \item interfaccia esplicita
+    \item API indipendente dalla tecnologia
+    \item servizi semplici per il cliente
+    \item nascondi le implementazioni interne
+\end{itemize}
+
+Tecnologie:
+\begin{itemize}
+    \item Remote Procedural Calls
+        \begin{itemize}
+            \item SOAP
+            \item gRPC
+            \item CORBA
+        \end{itemize}
+    \item REST
+    \item GraphQL
+    \item Message Brokers
+\end{itemize}

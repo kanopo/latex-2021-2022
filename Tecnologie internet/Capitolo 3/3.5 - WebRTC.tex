@@ -1,0 +1,27 @@
+\subsection{WebRTC e PeerJS}
+\subsubsection{WebRTC}
+Progetto FOSS che permette di creare browser e mobile app con comunicazione real time.
+Permette di fare app come quelle per le video chiamae usando semplicemente le API di WebRTC.
+\subsubsection{No plugins}
+Molte app web usano WebRTC, ma necessitano di download, di plugin o app native.
+\subsubsection{WebRTC app}
+Un'app con WebRTC necessita di:
+\begin{itemize}
+    \item GET/SET streaming audio, video e di dati
+    \item GET network info(IP, port) per condividerlo con gli altri per poter comunicare(anche attraverso firewall o reti NAT).
+    \item Comunica segnali per gli errori
+    \item scambia info riguardo le capacita del client(risoluzione, codec, ecc)
+\end{itemize}
+
+\subsubsection{STUN e TURN}
+WebRTC è disegnato per lavorare con le reti p2p, ma WebRTC è costruito per funzionare nella rete tradizionale, quindi necessita di un paio di accorgimenti:
+\begin{itemize}
+    \item STUN per prendere l'IP del pc
+    \item TURN per fare da nodi di relay se la connessione p2p fallisca
+\end{itemize}
+
+\subsubsection{Sicurezza}
+La sicurezza è gestita per tutti i componenti di WebRTC, e le proprie API JavaScript possono essere usati solo con HTTP su TLS(HTTPS) o da localhost.
+\subsubsection{PeerJS}
+Wrappa l'implementazione browser di WebRTC per offrire una connessione p2p completa, configurabile e facile da usare.
+

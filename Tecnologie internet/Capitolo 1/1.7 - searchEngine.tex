@@ -1,0 +1,33 @@
+\subsection{Search Engine for the Web}
+\subsubsection{Web search}
+L'operazione di ricerca nel web è molto simile al ricevere informazioni specifiche da un determinato server, solo che utilizza il linguggio naturale per cercare i documenti html.
+\subsubsection{Motori di ricerca}
+I motori di ricerca hanno tre caratteristiche principali:
+\begin{enumerate}
+    \item Crawling:
+        navigare in internet per cercare tutti i contenuti
+    \item Indexing
+        salvare e organizzare tutti i documenti trovati durante il Crawling
+    \item Ranking
+        riorganizzare i risultati della ricerca in base all'accuratezza nel rispondere al'argomento ricercato(se cerca cane, non mi aspetto di trovare navi militari ecc)
+\end{enumerate}
+
+L'indice di tutti i documenti deve essere regolarmente aggiornato per includere nuove pagine.
+
+\subsubsection{Web crawling}
+Un crowler basilare(robot, bot, spider) consiste in:
+\begin{itemize}
+    \item Una coda di URI da visutare
+    \item Un metodo per ricevere le risorse delle pagine con HTTP
+    \item Un page parser per estrarre informazione
+    \item Una connessione all'indicizzatore del motore di ricerca
+\end{itemize}
+Il procedimento ordinario consiste in: prendere un URL, analizzare e trovare URL all'interno del testo per aggiungere questi link nella coda di analisi e continuare a indicizzare le pagine.
+
+\subsubsection{PageRank}
+Algoritmo per il page ranking inventato da Larry Page, utilizzato da Google per il suo motore di ricerca.
+PageRank è un algoritmo che analizza i link fra le risorse e il risultato viene utilizzato per il ranking.
+Avendo una pagina $p$ e questa pagina è collegata alle pagine $q_1, ..., q_n$.
+\begin{displaymath}
+    PR(p) = (1-d) + d[\frac{PR(q_1)}{C(q_1)}+ ... + \frac{PR(q_n)}{C(q_n)} ]
+\end{displaymath}

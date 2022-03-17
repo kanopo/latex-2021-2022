@@ -1,0 +1,71 @@
+\subsection{RESTful Services}
+Rest sta per Representational State Transfer, si appoggia su comunicazioni stateless client-server.
+
+\subsubsection{Componenti architetturali di REST}
+\begin{itemize}
+    \item Risorsa: Sono la chiave di un vero design RESTful. Le risorse sono identificate da richieste, le risorse sono concettualemente separate dalla rappresentazione che viene inviata al client.
+    \item Risorsa Web: Risorse piccole (Tipo la filosofia UNIX o KISS), se dentro alla risorsa ci sono elementi interessanti che però sono in altre risorse, è possibile includerle mediante link.
+    \item Non c'è uno stato di connessione
+    \item La risposta dovrebbe essere cacheable
+    \item Possono essere usati dei server proxy
+\end{itemize}
+
+\subsubsection{Servizi RESTful}
+\begin{itemize}
+    \item indipendenti dalla piattaforma
+    \item indipendenti dal linguaggio
+    \item basati su standard
+\end{itemize}
+
+\subsubsection{Routes vs. Endpoints}
+Gli endpoint sono accessibili dalla API, una route è il "nome" usato per accedere all'endpoint mediante URL.
+Esempio: http://example.com/wp-json/wp/v2/posts/123
+\begin{itemize}
+    \item la route è wp/v2/posts/123
+    \item La rout ha 3 endpoint
+\end{itemize}
+
+\subsubsection{Guide di design REST}
+\begin{enumerate}
+    \item Non usare indirizzi URL fisici: prova.com/ciao.xml, ma usare indirizzi logici come prova.com/saluti/002
+    \item Le query devono restituire il minor numero di dati possibile, se la query restituisce tanti oggetti sarebbe meglio restituirne 10 alla volta
+    \item La risposta di un servizio REST può essere qualsiasi cosa, è necessaria una documentazione chiara.
+    \item Se una risposta ha funzionalità aggiuntive, la query dovrebbe comunicare gli URL di possibili azioni e non lasciar creare URl all'utente.
+\end{enumerate}
+
+\subsubsection{Consumare un servizio REStful con JQUERY}
+Il servizio è: http://rest-service.guides.spring.io/greeting.
+
+
+Il servizio risponde: {"id":1,"content":"Hello, World!"}.
+
+\begin{lstlisting}
+public/hello.js
+$(document).ready(function() {
+    $.ajax({
+        url: "http://rest-service.guides.spring.io/greeting"
+    }).then(function(data) {
+        $('.greeting-id').append(data.id);
+       $('.greeting-content').append(data.content);
+    });
+});
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello jQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/
+        jquery/3.6.0/jquery.min.js"></script>
+        <script src="hello.js"></script>
+    </head>
+    <body>
+        <div>
+            <p class="greeting-id">The ID is </p>
+            <p class="greeting-content">The content is </p>
+        </div>
+    </body>
+</html>
+\end{lstlisting}
+
+\subsubsection{Express}
+Express.js permette di creare velocemente e facilmente API robuste.

@@ -1,0 +1,41 @@
+\subsection{JavaScript Execution Window DOM}
+\subsubsection{Client Side JS timeline}
+\begin{enumerate}
+    \item Il browser web crea un oggetto documento e comincia a fare il parsing del documento HTML, la proprietà \textit{document.readyState = loading}.
+    \item Quando il parser incontra un tag script senza async o defer, scarica lo script e lo eseguisce come se fosse uno script in linea
+    \item Quando il parser incontra script che hanno attributi come async o defer, semplicement scarica gli script ma non esegue nulla, continua con il parsing della pagina
+    \item quando tutto il documento ha finito il parsing, \textit{document.readyState = interactive}
+    \item Ogni script che ha l'attributo defer, vine eseguito nell'ordine con il quale appaiono nel documento
+    \item Il browser accende l'evento \textit{DOMContentLoaded} nel document object, che rappresenta la transiziona dagli script sincroni a quelli asincroni
+    \item quando tutta la pagina è stata caricata, compresi tutti gli script async, \textit{document.readyState = complete}
+\end{enumerate}
+
+\subsubsection{Same-origin policy}
+Politica per la quale JavaScript, può interagire solo con il codice della sua finestra del browser, come se fosse in un sandbox(container ecc), per motivi di sicurezza.
+
+\subsubsection{Window Object}
+Le sue proprietà principali solo legate a:
+\begin{enumerate}
+    \item timers: permette di schedulare una funzione dopo un'intervallo di tempo.
+    \item browser location e navigation: rappresenta l'URL corrente.
+    \item browser history
+    \item browser and screen info: Browser vendor e version number
+    \item dialog boxes: Semplici box di dialogo
+    \item document element: ogni elemento dell'HTML che ha un id può essere selezionato con questo oggetto.
+    \item cross-window comunication
+\end{enumerate}
+
+\subsubsection{DOM}
+DOM sta per Document Object Model e viene usato per prendere, modificare e aggiungere elementi HTML.
+
+\subsubsection{Esempio DOM}
+\begin{lstlisting}
+<html>
+<body>
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script>
+</body>
+</html>  
+\end{lstlisting}
