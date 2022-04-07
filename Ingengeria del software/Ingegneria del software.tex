@@ -24,7 +24,7 @@
 
 
 \begin{document}
-    \author{Dmitri Ollari Ischimji\\dmotrio.xyz}
+    \author{dmotrio.xyz}
     \title{Ingegneria dei software}
 
     \maketitle
@@ -285,8 +285,74 @@ UML è semplice, espressivo, utile, consistent, estensibile.
 
 \section{T4 - Requirements engineering}
 
+Gli scopi dell'ingegnerizzazione dei requisiti è \textbf{identificare} i servizi necessari
+e i constrait, \textbf{definire} offerta e contratto, \textbf{ottenere} tutte le informazioni
+necessarie al design.
+
+Si cerca di ottenere requirements:
+\begin{itemize}
+    \item validi(reali necessità)
+    \item non ambigui
+    \item completi
+    \item comprensibili
+    \item consistenti
+    \item prioritizzati
+    \item verificabili
+    \item modificabili
+    \item tracciabili
+\end{itemize}
+
+\subsection{Classificazione dei requirements}
+\subsubsection{Requisiti funzionali(features di sistema)}
+Descrivono funzionalità di sistema o di servizio, come input di dati, output, 
+operazioni svolte, workflow, autorizzazioni.
+
+\subsubsection{Requisiti non funzionali(features di sistema)}
+
+Descrivono i limitti di parti del sistema e del suo sviluppo.
+
+Specificano criteri per giudicare l'operato del sistema.
+
+\subsubsection{Requisiti del dominio(features di sistema)}
+Derivato dal campo di utilizzo del software.
+
+\subsubsection{Requisiti volatili(natura statica/dinamica)}
+\begin{itemize}
+    \item mutable requirements = cambiano nel tempo(tasse, nomative, ecc)
+    \item emergent requirements = cambiano quando il cliente capisce di più il sistema
+    \item consequential requirements = emergono con l'informatizzazione del sistema che non lo era
+    \item compatibility requirements = emergono dal dover interfacciare il sistema con altri sistemi 
+\end{itemize}
+
+\subsection{Rischi}
+I rischi della stesura dei requisiti possono essere:
+\begin{itemize}
+    \item imprecisioni
+    \item conflitti tra requisiti
+\end{itemize}
+
+\subsection{Documento di specifica dei requirements}
+
+Questo documento specifica i requisiti del sistema, includendo una definizione
+e una specifica.
+
+Prende il nome di system specification se include direttive su harware e software.
+
+Software Requirements Specification (\textbf{SRS}) se include solo specifiche software.
 
 
+Un \textbf{SRS} deve includere:
+\begin{itemize}
+    \item introduzione
+    \item descrizione generale
+    \item features
+    \item requirements
+\end{itemize}
+
+Il linguaggio naturale usato per stilare questo documento implica ambiguità,
+per questo si ricorre a una struttura ben definita per evitare ambiguità.
+
+\section{T5 - Requirements ecgineering and UML}
 
 
 
